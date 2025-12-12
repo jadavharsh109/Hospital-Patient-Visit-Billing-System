@@ -1,13 +1,16 @@
-🏥 Hospital Visit & Billing Management System (SQL Project)
+# 🏥 Hospital Visit & Billing Management System (SQL Project)
 
-📌 Overview
+## 📌 Overview
 
 This project is a complete SQL-based hospital management and analytics system built using a single-table dataset (500+ rows).
 It covers patient visits, billing, payments, follow-ups, and operational analytics through advanced SQL queries, stored procedures, and triggers.
 
 The goal is to simulate real hospital workflows using SQL only.
 
-📑 Dataset Used
+![SQL](https://img.shields.io/badge/SQL-MySQL-blue)  
+![Status](https://img.shields.io/badge/Status-Completed-green)  
+![Management](https://img.shields.io/badge/Domain-Cricket-orange)  
+##📑 Dataset Used
 
 The project uses one consolidated table containing:
 
@@ -23,41 +26,42 @@ Procedures
 
 Payments & billing
 
-Table Name: hospital
+## Table Name: hospital
+## 🧱 Table Structure
+| **Column**              | **Description**                       |
+| ----------------------- | ------------------------------------- |
+| **visit_id (PK)**       | Unique visit identifier               |
+| **patient_id**          | Patient ID                            |
+| **patient_name**        | Name of the patient                   |
+| **doctor_id**           | Doctor ID                             |
+| **doctor_name**         | Name of the doctor                    |
+| **department**          | Doctor’s department                   |
+| **visit_date**          | Date of the hospital visit            |
+| **visit_type**          | OPD / IPD / Emergency                 |
+| **age**                 | Patient age                           |
+| **diagnosis**           | Condition diagnosed                   |
+| **procedure_performed** | Medical procedure performed (if any)  |
+| **follow_up_needed**    | Y / N (whether follow-up is required) |
+| **payment_type**        | Cash / Insurance / Online             |
+| **billing_amount**      | Total amount billed                   |
+| **paid_amount**         | Amount paid                           |
+| **outstanding_amount**  | Due amount after payment              |
+| **status**              | valid / invalid record status         |
 
-🧱 Table Structure (Single Table)
-Column	Description
-visit_id (PK)	Unique visit identifier
-patient_id	Patient ID
-patient_name	Name of the patient
-doctor_id	Doctor ID
-doctor_name	Name of the doctor
-department	Doctor’s department
-visit_date	Date of the hospital visit
-visit_type	OPD / IPD / Emergency
-age	Patient age
-diagnosis	Condition diagnosed
-procedure_performed	Procedure performed (if any)
-follow_up_needed	Y / N
-payment_type	Cash / Insurance / Online
-billing_amount	Total billing
-paid_amount	Amount paid
-outstanding_amount	Due amount
-status	valid / invalid
-🔍 Key SQL Operations
-✔ UPDATE Queries
+## 🔍 Key SQL Operations
+## ✔ UPDATE Queries
 
 Increase paid_amount by 5% for Insurance payments
 
 Set age = NULL where age < 1
 
-✔ DELETE Queries
+## ✔ DELETE Queries
 
 Delete rows where billing_amount = 0
 
 Delete visits of patients marked invalid
 
-📊 Insights & Analytics
+## 📊 Insights & Analytics
 
 Total revenue, paid revenue, outstanding amount
 
@@ -73,7 +77,7 @@ Visits requiring follow-up
 
 Average billing by visit type (OPD / IPD / Emergency)
 
-🧠 Advanced SQL
+## 🧠 Advanced SQL
 JOINS (self-joins within the same table)
 
 Patient–doctor–department mapping
@@ -96,7 +100,7 @@ Ranking doctors by revenue
 
 LAG/LEAD analysis for revenue trends
 
-🏗️ Views Created
+## 🏗️ Views Created
 
 Monthly_Billing_Summary
 
@@ -104,31 +108,31 @@ Doctor_Performance
 
 High_Value_Patients
 
-⚙️ Stored Procedures
+## ⚙️ Stored Procedures
 
 settle_payment(visit_id, amount) – updates payment
 
 add_followup(visit_id) – flags visit for follow-up
 
-🔥 Triggers Implemented
+## 🔥 Triggers Implemented
 
 On billing update → insert into audit_log
 
 On new visit insert → auto-calculate outstanding_amount
 
-📂 Files Included
+## 📂 Files Included
 Hospital-SQL-Project/
 │── patient_data.csv
 │── hospital.sql
 │── README.md
 
-🚀 Applications
+## 🚀 Applications
 
 🧾 Hospital reporting and billing insights
 
 ⚙️ SQL automation using triggers & procedures
 
-📊 Business intelligence dashboards
+## 📊 Business intelligence dashboards
 
 🎓 Ideal for learning SQL, analytics & database design
 
