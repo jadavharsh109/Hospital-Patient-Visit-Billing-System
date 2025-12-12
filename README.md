@@ -1,12 +1,10 @@
-🏥 Hospital Visit & Billing Management System – SQL Project (Single-Table Dataset)
+# 🏥 Hospital Visit & Billing Management System – SQL Project
 
 This project demonstrates how a single raw hospital dataset (500+ rows) can be transformed into a fully functional SQL-based management and analytics system.
 Using one consolidated table that contains patient, doctor, visit, and billing details, the project performs data cleaning, transformation, reporting, automation, and analytics—similar to a real hospital workflow.
 
-<img width="102.4" height="153.6" alt="image" src="https://github.com/user-attachments/assets/00272abe-0ead-40aa-b1f8-6ce6adb7ea04" />
-
-
 📌 Key Features
+
 🔧 Data Cleaning & Updates
 
 Increase paid_amount by 5% for Insurance payments
