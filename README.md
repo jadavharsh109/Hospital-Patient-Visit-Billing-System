@@ -3,7 +3,7 @@
 This project demonstrates how a single raw hospital dataset (500+ rows) can be transformed into a fully functional SQL-based management and analytics system.
 Using one consolidated table that contains patient, doctor, visit, and billing details, the project performs data cleaning, transformation, reporting, automation, and analytics—similar to a real hospital workflow.
 
-<img width="1024" height="1536" alt="image" src="https://github.com/user-attachments/assets/00272abe-0ead-40aa-b1f8-6ce6adb7ea04" />
+<img width="10.24" height="15.36" alt="image" src="https://github.com/user-attachments/assets/00272abe-0ead-40aa-b1f8-6ce6adb7ea04" />
 
 
 📌 Key Features
