@@ -9,8 +9,8 @@ The goal is to simulate real hospital workflows using SQL only.
 
 ![SQL](https://img.shields.io/badge/SQL-MySQL-blue)  
 ![Status](https://img.shields.io/badge/Status-Completed-green)  
-![Management](https://img.shields.io/badge/Domain-Cricket-orange)  
-##📑 Dataset Used
+
+## 📑 Dataset Used
 
 The project uses one consolidated table containing:
 
