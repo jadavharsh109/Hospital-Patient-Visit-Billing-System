@@ -1,56 +1,102 @@
-# 🏥 Hospital Visit & Billing Management System – SQL Project
+🏥 Hospital Visit & Billing Management System (SQL Project)
 
-This project demonstrates how a single raw hospital dataset (500+ rows) can be transformed into a fully functional SQL-based management and analytics system.
-Using one consolidated table that contains patient, doctor, visit, and billing details, the project performs data cleaning, transformation, reporting, automation, and analytics—similar to a real hospital workflow.
+📌 Overview
 
-📌 Key Features
+This project is a complete SQL-based hospital management and analytics system built using a single-table dataset (500+ rows).
+It covers patient visits, billing, payments, follow-ups, and operational analytics through advanced SQL queries, stored procedures, and triggers.
 
-🔧 Data Cleaning & Updates
+The goal is to simulate real hospital workflows using SQL only.
+
+📑 Dataset Used
+
+The project uses one consolidated table containing:
+
+Patient details
+
+Doctor information
+
+Visit data
+
+Diagnoses
+
+Procedures
+
+Payments & billing
+
+Table Name: hospital
+
+🧱 Table Structure (Single Table)
+Column	Description
+visit_id (PK)	Unique visit identifier
+patient_id	Patient ID
+patient_name	Name of the patient
+doctor_id	Doctor ID
+doctor_name	Name of the doctor
+department	Doctor’s department
+visit_date	Date of the hospital visit
+visit_type	OPD / IPD / Emergency
+age	Patient age
+diagnosis	Condition diagnosed
+procedure_performed	Procedure performed (if any)
+follow_up_needed	Y / N
+payment_type	Cash / Insurance / Online
+billing_amount	Total billing
+paid_amount	Amount paid
+outstanding_amount	Due amount
+status	valid / invalid
+🔍 Key SQL Operations
+✔ UPDATE Queries
 
 Increase paid_amount by 5% for Insurance payments
 
-Set age < 1 to NULL
+Set age = NULL where age < 1
+
+✔ DELETE Queries
 
 Delete rows where billing_amount = 0
 
-Delete visits of "invalid" patients (manually tagged)
+Delete visits of patients marked invalid
 
-📊 Analytics & Insights
+📊 Insights & Analytics
 
-Total, paid, and outstanding revenue
+Total revenue, paid revenue, outstanding amount
 
-Revenue by doctor & department
+Revenue by doctor
 
-Top 10 spending patients
+Revenue by department
 
 Monthly revenue trend
 
+Top 10 highest billing patients
+
+Visits requiring follow-up
+
 Average billing by visit type (OPD / IPD / Emergency)
 
-Follow-up visit counts
+🧠 Advanced SQL
+JOINS (self-joins within the same table)
 
-🔍 SQL Operations
-📁 Joins
+Patient–doctor–department mapping
 
-(Performed logically within the same table using self-joins where needed)
+Procedures & billing comparison
 
-📎 Subqueries
+SUBQUERIES
 
-Patients with visit count > average
+Patients with visit count above average
 
-Visits above patient’s own average billing
+Visits where billing > patient’s own average
 
 Doctors earning above average revenue
 
-🪟 Window Functions
+WINDOW FUNCTIONS
 
-Running total of revenue
+Running total of daily revenue
 
-Doctor revenue ranking
+Ranking doctors by revenue
 
-LAG & LEAD revenue trends
+LAG/LEAD analysis for revenue trends
 
-🏗️ Views
+🏗️ Views Created
 
 Monthly_Billing_Summary
 
@@ -60,25 +106,36 @@ High_Value_Patients
 
 ⚙️ Stored Procedures
 
-settle_payment(visit_id, amount)
+settle_payment(visit_id, amount) – updates payment
 
-add_followup(visit_id)
+add_followup(visit_id) – flags visit for follow-up
 
-🔥 Triggers
+🔥 Triggers Implemented
 
-On billing update → log into audit table
+On billing update → insert into audit_log
 
-On new visit → auto-calculate outstanding amount
+On new visit insert → auto-calculate outstanding_amount
 
-🛢️ Tech Stack
+📂 Files Included
+Hospital-SQL-Project/
+│── patient_data.csv
+│── hospital.sql
+│── README.md
 
-MySQL 
+🚀 Applications
 
-SQL analytics, views, procedures, triggers
+🧾 Hospital reporting and billing insights
 
-Single-table relational logic
+⚙️ SQL automation using triggers & procedures
 
-👨‍💻 Author
+📊 Business intelligence dashboards
 
-Harshkumar Jadav
-SQL | Data Analyst | Data Science & ML
+🎓 Ideal for learning SQL, analytics & database design
+
+🚀 Future Enhancements
+
+Integrate with Python (Pandas, Matplotlib) for visual insights
+
+Build Power BI dashboards for trends & analytics
+
+Add ML models for revenue prediction
